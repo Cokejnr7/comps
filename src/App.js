@@ -1,12 +1,11 @@
 import DropDown from "./components/DropDown";
 
 const App = () => {
-  
-  const options = {
-    Red: "red",
-    Green: "green",
-    Blue: "blue",
-  };
+  const options = [
+    { label: "Red", value: "red" },
+    { label: "Green", value: "green" },
+    { label: "Blue", value: "blue" },
+  ];
 
   return (
     <div className="app">

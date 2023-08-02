@@ -23,10 +23,11 @@ const NavigationProvider = ({ children }) => {
   };
 
   return (
-    <NavigationContext.Provider value={(currentPath, navigate)}>
+    <NavigationContext.Provider value={{ currentPath, navigate }}>
       {children}
     </NavigationContext.Provider>
   );
 };
 
-export default NavigationProvider;
+export { NavigationProvider };
+export default NavigationContext;

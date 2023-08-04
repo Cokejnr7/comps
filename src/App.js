@@ -3,6 +3,7 @@ import DropDownPage from "./screens/DropdownPage";
 import AccordionPage from "./screens/AccordionPage";
 import ButtonPage from "./screens/ButtonPage";
 import ModalPage from "./screens/ModalPage";
+import TablePage from "./screens/TablePage";
 import SideBar from "./components/SideBar";
 
 const App = () => {
@@ -21,6 +22,9 @@ const App = () => {
         </Route>
         <Route path="/modal">
           <ModalPage />
+        </Route>
+        <Route path="/table">
+          <TablePage />
         </Route>
       </div>
     </div>

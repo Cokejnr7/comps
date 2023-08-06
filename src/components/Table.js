@@ -1,4 +1,4 @@
-const Table = ({ data, config }) => {
+const Table = ({ data, config, keyFn }) => {
   const renderedRows = data.map((rowData) => {
     const renderedRow = config.map((row) => {
       return (
@@ -8,7 +8,7 @@ const Table = ({ data, config }) => {
       );
     });
     return (
-      <tr className="border-b" key={rowData.name}>
+      <tr className="border-b" key={keyFn(rowData)}>
         {renderedRow}
       </tr>
     );

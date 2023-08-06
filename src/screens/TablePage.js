@@ -1,4 +1,4 @@
-import Table from "../components/Table";
+import SortableTable from "../components/SortableTable";
 
 const TablePage = () => {
   const config = [
@@ -39,9 +39,13 @@ const TablePage = () => {
     },
   ];
 
+  const keyFn = (fruit) => {
+    return fruit.name;
+  };
+
   return (
     <div>
-      <Table data={data} config={config} />
+      <SortableTable data={data} config={config} keyFn={keyFn} />
     </div>
   );
 };

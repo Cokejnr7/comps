@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 const Table = ({ data, config, keyFn }) => {
   const renderedRows = data.map((rowData) => {
     const renderedRow = config.map((row) => {
@@ -15,6 +17,7 @@ const Table = ({ data, config, keyFn }) => {
   });
 
   const renderedColumns = config.map((col) => {
+    if (col.header) return <Fragment key={col.label}>{col.header()}</Fragment>;
     return <th key={col.label}>{col.label}</th>;
   });
 

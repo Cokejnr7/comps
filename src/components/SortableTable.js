@@ -8,6 +8,12 @@ const SortableTable = (props) => {
   const { config, data } = props;
 
   const handleClick = (label) => {
+    if (sortBy !== label && sortBy) {
+      setSortBy(label);
+      setSortOrder("asc");
+      return;
+    }
+
     if (sortOrder === null) {
       setSortOrder("asc");
       setSortBy(label);
@@ -31,7 +37,7 @@ const SortableTable = (props) => {
       const sortValueA = sortValue(a);
       const sortValueB = sortValue(b);
 
-      const order = sortBy === "asc" ? 1 : -1;
+      const order = sortOrder === "asc" ? 1 : -1;
 
       if (typeof sortValueA === "string") {
         return sortValueA.localeCompare(sortValueB) * order;

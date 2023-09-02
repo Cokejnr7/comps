@@ -5,7 +5,7 @@ const useCounter = (initialValue) => {
   const increment = () => {
     setCounter(counter + 1);
   };
-  return { counter, increment };
+  return { counter, increment, setCounter };
 };
 
 export default useCounter;
